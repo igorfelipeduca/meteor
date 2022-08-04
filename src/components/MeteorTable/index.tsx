@@ -10,11 +10,14 @@ import {
   Skeleton,
   Link,
 } from '@chakra-ui/react';
+import { Badge } from '@chakra-ui/react';
+
 import { useEffect, useState } from 'react';
 
 import { MeteorInterface } from '../../types/meteorInterface';
 import { getAllObjecs } from '../../api/requests/getAllObjects';
 import returnDayDate from '../../services/date/returnDayDate';
+import HazardousBadge from './components/HazardousBadge';
 
 type MeteorTableProps = {
   measurementSystem: string;
@@ -98,7 +101,9 @@ const MeteorTable: React.FC<MeteorTableProps> = ({ measurementSystem }) => {
                 </Td>
                 <Td>{object.name}</Td>
                 <Td>
-                  {object.is_potentially_hazardous_asteroid ? 'Yes' : 'No'}
+                  <HazardousBadge
+                    isHazardous={object.is_potentially_hazardous_asteroid}
+                  />
                 </Td>
                 <Td isNumeric>
                   {Math.round(
