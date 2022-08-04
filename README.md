@@ -20,7 +20,7 @@
     <br> 
 </p>
 
-![Webiste preview](https://i.ibb.co/LR0hGRq/image-2022-08-04-114302627.png)
+[![Webiste preview](https://i.ibb.co/LR0hGRq/image-2022-08-04-114302627.png)](https://meteor-app.vercel.app/)
 
 ## 📝 Table of Contents
 
